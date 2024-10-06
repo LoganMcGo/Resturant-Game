@@ -1,0 +1,12 @@
+CollisionShape2D
+StaticBody2D
+Sprite2D
+Area2D
+Label
+Control
+TileMap
+RigidBody2D
+Node2D
+Camera2D
+CharacterBody2D
+Node
