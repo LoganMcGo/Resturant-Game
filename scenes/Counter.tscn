@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://dk3cnm4njf2xw"]
+
+[ext_resource type="Script" path="res://scripts/counter.gd" id="1_l1ipo"]
+[ext_resource type="Texture2D" uid="uid://jvuv2738w16u" path="res://assets/Tiles/tile_321.png" id="2_36gw6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cd46s"]
+size = Vector2(72, 72)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jmb3j"]
+size = Vector2(64, 64)
+
+[node name="Area2D" type="Area2D"]
+script = ExtResource("1_l1ipo")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_36gw6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_cd46s")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("RectangleShape2D_jmb3j")
